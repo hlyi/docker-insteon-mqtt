@@ -4,7 +4,7 @@ VOLUME /config
 
 ENV LANG C.UTF-8
 
-RUN apt-get update && apt-get install -y git && \ 
+RUN apt-get update && apt-get install -y git wget && \ 
 git clone https://github.com/TD22057/insteon-mqtt.git /opt/insteon-mqtt && \
 pip install /opt/insteon-mqtt && \
 rm -rf /var/lib/apt/lists/*
