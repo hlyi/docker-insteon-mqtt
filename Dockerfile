@@ -11,7 +11,7 @@ rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh entrypoint.sh
 
-EXPORT 8099/tcp
-EXPORT 8099/udp
+EXPOSE 8099/tcp
+EXPOSE 8099/udp
 
 CMD ["/entrypoint.sh" ]
