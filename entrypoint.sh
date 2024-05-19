@@ -11,5 +11,5 @@ if [ ! -f /config/insteon_mqtt.yaml ]; then
     echo "Please edit the config file insteon_mqtt.yaml, you can find documentation at https://github.com/TD22057/insteon-mqtt"
     echo "Then you can restart InsteonMQTT container."
 else
-    python3 /usr/local/bin/insteon-mqtt /config/insteon_mqtt.yaml start
+    python3 /opt/insteon-mqtt/hassio/start.py  /config/insteon_mqtt.yaml start
 fi

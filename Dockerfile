@@ -1,4 +1,4 @@
-FROM python:3.9-slim-buster
+FROM python:3.11-slim
 
 VOLUME /config
 
@@ -11,4 +11,7 @@ rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh entrypoint.sh
 
-CMD ["./entrypoint.sh" ]
+EXPORT 8099/tcp
+EXPORT 8099/udp
+
+CMD ["/entrypoint.sh" ]
